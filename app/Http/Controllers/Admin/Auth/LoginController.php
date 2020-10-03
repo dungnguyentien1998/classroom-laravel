@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin/dashboard';
+    protected $redirectTo = '/admin/dashboard/users';
 
     /**
      * Create a new controller instance.
@@ -39,6 +39,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest:admin')->except('logout');
     }
+
     /**
      * Show the application's login form.
      *
@@ -109,4 +110,15 @@ class LoginController extends Controller
     {
         return Auth::guard('admin');
     }
+//
+//    /**
+//     * Get the login username to be used by the controller.
+//     *
+//     * @return string
+//     */
+//    public function username()
+//    {
+//        return 'username';
+//    }
+
 }
