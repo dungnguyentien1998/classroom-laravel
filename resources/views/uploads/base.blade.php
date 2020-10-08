@@ -5,14 +5,14 @@
 
         <section class="content-header">
             <h1>
-                User Management
+                Student upload Management
             </h1>
             <ol class="breadcrumb">
                 <!-- li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li-->
-                <li class="active">User Management</li>
+                <li class="active">Student upload Management</li>
             </ol>
         </section>
-    @yield('action-content')
+        @yield('action-content')
 
     </div>
 @endsection

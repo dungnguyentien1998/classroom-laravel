@@ -26,6 +26,15 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
+    public function messagesSent(){
+        return $this->hasMany(Message::class, 'messages.sender_id');
+    }
+
+//    public function messagesReceived(){
+//        return $this->hasMany('App\Models\Message', 'message.receiver_id');
+//    }
+
+
     /**
      * The attributes that should be hidden for arrays.
      *

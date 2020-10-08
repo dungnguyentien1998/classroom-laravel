@@ -8,13 +8,13 @@
                     <div class="panel-heading">Update user</div>
                     <div class="panel-body">
                         @if(Auth::user()->is_admin == 1)
-
                             <form class="form-horizontal" role="form" method="POST"
                                   action="/admin/dashboard/users/{{$user->id}}">
                                 @else
                                     <form class="form-horizontal" role="form" method="POST"
                                           action="{{ route('users.update', $user->id) }}">
                                         @endif
+
                                         <input type="hidden" name="_method" value="PATCH">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
@@ -97,4 +97,53 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    @if(Auth::user()->is_admin == 1)
+                        <form class="form-horizontal" role="form" method="POST" action="/admin/dashboard/messages/{{$user->id}}">
+                    @else
+                        <form class="form-horizontal" role="form" method="POST" action="/messages/{{$user->id}}">
+                    @endif
+
+                        {{csrf_field()}}
+                        <div class="form-group">
+
+                            {{--                    <textarea placeholder="Leave a message!" name="message"--}}
+                            {{--                              class="pb-cmnt-textarea"></textarea>--}}
+                            <input placeholder="Leave a message!" name="message_content"
+                                   class="pb-cmnt-textarea">
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+{{--                                <input type="submit" name="Send" value="Send" class="btn btn-primary">--}}
+                                <button type="submit" name="Send" class="btn btn-primary">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .pb-cmnt-container {
+            font-family: Lato;
+            margin-top: 100px;
+        }
+
+        .pb-cmnt-textarea {
+            resize: none;
+            padding: 20px;
+            height: 130px;
+            width: 100%;
+            border: 1px solid #F2F2F2;
+            font-size: 20px;
+        }
+    </style>
 @endsection

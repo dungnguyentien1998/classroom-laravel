@@ -20,25 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37d21967-d254-463c-811b-dca591f115b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app-template.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app-template.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/base.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChallengeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeworkController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Challenge.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Homework.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Submission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/challenge/New Text Document.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/homeworks/02-kientruc-v4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/submissions/08-FaultTolerance.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/challenges/base.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/challenges/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/challenges/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/challenges/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/messages/base.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/messages/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/messages/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/messages/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/submissions/base.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/submissions/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/submissions/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/submissions/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/uploads/base.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/uploads/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/uploads/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/uploads/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/uploads/submission.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +196,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -192,6 +208,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\DevPrograms\xampp\htdocs\classroom-laravel\resources\views\uploads" />
+      <recent name="D:\DevPrograms\xampp\htdocs\classroom-laravel\resources\views\uploads\student" />
       <recent name="D:\DevPrograms\xampp\htdocs\classroom-laravel\resources\views\users" />
     </key>
   </component>
@@ -210,7 +228,16 @@
       <workItem from="1601519226873" duration="7522000" />
       <workItem from="1601536359081" duration="10236000" />
       <workItem from="1601604967880" duration="8331000" />
-      <workItem from="1601620382328" duration="31554000" />
+      <workItem from="1601620382328" duration="45356000" />
+      <workItem from="1601779120945" duration="21010000" />
+      <workItem from="1601821330769" duration="1391000" />
+      <workItem from="1601863332938" duration="6130000" />
+      <workItem from="1601885867184" duration="5288000" />
+      <workItem from="1601904541763" duration="8604000" />
+      <workItem from="1601949945565" duration="7885000" />
+      <workItem from="1602079856868" duration="1168000" />
+      <workItem from="1602082358050" duration="7637000" />
+      <workItem from="1602142544793" duration="11980000" />
     </task>
     <servers />
   </component>
@@ -241,10 +268,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="66" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1601649852530" />
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601652813436">
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601956458493">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1601652813436" />
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1601956458493" />
     <state width="1321" height="192" key="GridCell.Tab.0.bottom" timestamp="1601392813714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -261,10 +288,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1321" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1601392813714" />
-    <state x="517" y="307" key="NewPhpFileDialog" timestamp="1601613132999">
+    <state x="517" y="307" key="NewPhpFileDialog" timestamp="1602146678055">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="517" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1601613132998" />
+    <state x="517" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1602146678055" />
     <state x="92" y="92" width="1182" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601525495820">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

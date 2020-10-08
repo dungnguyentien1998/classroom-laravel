@@ -34,6 +34,27 @@
                 <li><a href="{{ route('users.index') }}"><i class="fa fa-link"></i> <span>User management</span></a>
                 </li>
             @endif
+            @if(Auth::user()->is_admin == 1)
+
+                <li><a href="/admin/dashboard/messages"><i class="fa fa-link"></i> <span>Message management</span></a></li>
+            @else
+                <li><a href="{{route('messages.index') }}"><i class="fa fa-link"></i> <span>Message management</span></a>
+                </li>
+            @endif
+            @if(Auth::user()->is_admin == 1)
+
+                <li><a href="/admin/dashboard/uploads"><i class="fa fa-link"></i> <span>Upload management</span></a></li>
+            @else
+                <li><a href="/uploads"><i class="fa fa-link"></i> <span>Upload management</span></a>
+                </li>
+            @endif
+            @if(Auth::user()->is_admin == 1)
+
+                <li><a href="/admin/dashboard/challenges"><i class="fa fa-link"></i> <span>Challenge management</span></a></li>
+            @else
+                <li><a href="/challenges"><i class="fa fa-link"></i> <span>Challenge management</span></a>
+                </li>
+            @endif
         </ul>
 
     </section>
