@@ -20,43 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37d21967-d254-463c-811b-dca591f115b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ChallengeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeworkController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Challenge.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Homework.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Submission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/challenge/New Text Document.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homeworks/02-kientruc-v4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/submissions/08-FaultTolerance.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/challenges/base.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/challenges/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/challenges/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/challenges/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/messages/base.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/messages/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/messages/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/messages/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/submissions/base.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/submissions/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/submissions/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/submissions/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/uploads/base.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/uploads/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/uploads/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/uploads/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/uploads/submission.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8d61c6ee-1b97-4329-813c-bef2ac0b5df4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8d61c6ee-1b97-4329-813c-bef2ac0b5df4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app-template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/messages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/messages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +215,8 @@
       <workItem from="1601949945565" duration="7885000" />
       <workItem from="1602079856868" duration="1168000" />
       <workItem from="1602082358050" duration="7637000" />
-      <workItem from="1602142544793" duration="11980000" />
+      <workItem from="1602142544793" duration="17819000" />
+      <workItem from="1602209456562" duration="9168000" />
     </task>
     <servers />
   </component>
@@ -260,18 +239,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="274" y="2" width="1092" height="766" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601473329103">
+    <state x="274" y="2" width="1092" height="766" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602211063984">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="274" y="2" width="1092" height="766" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1601473329103" />
+    <state x="274" y="2" width="1092" height="766" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1602211063984" />
     <state x="488" y="66" key="#com.intellij.ide.util.MemberChooser" timestamp="1601649852530">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="66" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1601649852530" />
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601956458493">
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602212678979">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1601956458493" />
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1602212678979" />
     <state width="1321" height="192" key="GridCell.Tab.0.bottom" timestamp="1601392813714">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

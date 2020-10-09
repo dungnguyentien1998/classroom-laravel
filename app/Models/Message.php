@@ -18,10 +18,10 @@ class Message extends Model
     public $timestamps = false;
 
     public function userSent(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\User', 'sender_id', 'id');
     }
 
-//    public function userReceived(){
-//        return $this->belongsTo('App\Models\User', 'users.id');
-//    }
+    public function userReceived(){
+        return $this->belongsTo('App\Models\User', 'receiver_id', 'id');
+    }
 }

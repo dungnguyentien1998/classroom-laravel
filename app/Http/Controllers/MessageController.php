@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,8 +16,11 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
-        return view('messages.index', compact('messages'));
+//        $messages = Message::all();
+        $user = User::find(Auth::id());
+        $sent = $user->messagesSent()->get();
+        $received = $user->messagesReceived()->get();
+        return view('messages.index', compact('sent', 'received'));
     }
 
     /**

@@ -1,10 +1,10 @@
 <header class="main-header">
 
-    <a href="index2.html" class="logo">
+    <a href="" class="logo">
 
-        <span class="logo-mini"><b>E</b>M</span>
+        <span class="logo-mini"></span>
 
-        <span class="logo-lg">{{ config('app.name', 'EmployeeManagement') }}</span>
+        <span class="logo-lg">Classroom</span>
     </a>
 
 
@@ -21,7 +21,7 @@
 
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                        <img src="{{ asset("/bower_components/AdminLTE/dist/img/user2-160x160.jpg") }}"
+                        <img src=""
                              class="user-image" alt="User Image">
 
                         <span class="hidden-xs">{{ Auth::user()->username }}</span>
@@ -29,7 +29,7 @@
                     <ul class="dropdown-menu">
 
                         <li class="user-header">
-                            <img src="{{ asset("/bower_components/AdminLTE/dist/img/user2-160x160.jpg") }}"
+                            <img src=""
                                  class="img-circle" alt="User Image">
 
                             <p>

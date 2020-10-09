@@ -55,6 +55,7 @@ class AdminController extends UserController
             'email'=>'required',
             'password'=>'required',
             'username'=>'required',
+            'contact'=>'required',
         ]);
 
         User::create([
@@ -62,6 +63,7 @@ class AdminController extends UserController
             'email' => $request['email'],
             'username' => $request['username'],
             'password' => Hash::make($request['password']),
+            'contact' => $request['contact'],
 
         ]);
 //        return redirect('/users')->with('success', 'User saved!');
@@ -108,12 +110,14 @@ class AdminController extends UserController
         $constraints = [
             'name'=>'required',
             'email'=>'required',
-            'username'=>'required'
+            'username'=>'required',
+            'contact'=>'required'
         ];
         $input = [
             'name' => $request['name'],
             'email' => $request['email'],
             'username' => $request['username'],
+            'contact' => $request['contact'],
         ];
         if ($request['password'] != null && strlen($request['password']) > 0) {
             $constraints['password'] = 'required';

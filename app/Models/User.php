@@ -21,18 +21,18 @@ class User extends Authenticatable
         'email',
         'password',
         'username',
-//        'contact',
+        'contact',
     ];
 
     public $timestamps = false;
 
     public function messagesSent(){
-        return $this->hasMany(Message::class, 'messages.sender_id');
+        return $this->hasMany('App\Models\Message', 'sender_id');
     }
 
-//    public function messagesReceived(){
-//        return $this->hasMany('App\Models\Message', 'message.receiver_id');
-//    }
+    public function messagesReceived(){
+        return $this->hasMany('App\Models\Message', 'receiver_id');
+    }
 
 
     /**

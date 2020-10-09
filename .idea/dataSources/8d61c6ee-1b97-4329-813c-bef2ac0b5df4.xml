@@ -1058,224 +1058,245 @@
     <table id="336" parent="7" name="files_homework"/>
     <table id="337" parent="7" name="files_submission"/>
     <table id="338" parent="7" name="messages"/>
-    <table id="339" parent="7" name="users"/>
-    <column id="340" parent="335" name="id">
+    <table id="339" parent="7" name="migrations">
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </table>
+    <table id="340" parent="7" name="users"/>
+    <column id="341" parent="335" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="341" parent="335" name="name">
+    <column id="342" parent="335" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="342" parent="335" name="hint">
+    <column id="343" parent="335" name="hint">
       <Position>3</Position>
       <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="343" parent="335" name="created_at">
+    <column id="344" parent="335" name="created_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="344" parent="335" name="PRIMARY">
+    <key id="345" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="345" parent="336" name="id">
+    <column id="346" parent="336" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="346" parent="336" name="name">
+    <column id="347" parent="336" name="path">
       <Position>2</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="347" parent="336" name="size">
+    <column id="348" parent="336" name="size">
       <Position>3</Position>
       <DataType>int(100)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="348" parent="336" name="download">
+    <column id="349" parent="336" name="download">
       <Position>4</Position>
       <DataType>int(100)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="349" parent="336" name="upload_by">
+    <column id="350" parent="336" name="upload_by">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="350" parent="336" name="homework_teacher">
+    <index id="351" parent="336" name="homework_teacher">
       <ColNames>upload_by</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="351" parent="336" name="PRIMARY">
+    <key id="352" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="352" parent="336" name="homework_teacher">
+    <foreign-key id="353" parent="336" name="homework_teacher">
       <ColNames>upload_by</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="353" parent="337" name="id">
+    <column id="354" parent="337" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="354" parent="337" name="name">
+    <column id="355" parent="337" name="path">
       <Position>2</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="355" parent="337" name="size">
+    <column id="356" parent="337" name="size">
       <Position>3</Position>
       <DataType>int(100)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="356" parent="337" name="download">
+    <column id="357" parent="337" name="download">
       <Position>4</Position>
       <DataType>int(100)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="357" parent="337" name="upload_by">
+    <column id="358" parent="337" name="upload_by">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="358" parent="337" name="homework_id">
+    <column id="359" parent="337" name="homework_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="359" parent="337" name="submission_student">
+    <index id="360" parent="337" name="submission_student">
       <ColNames>upload_by</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="360" parent="337" name="submission_homework">
+    <index id="361" parent="337" name="submission_homework">
       <ColNames>homework_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="361" parent="337" name="PRIMARY">
+    <key id="362" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="362" parent="337" name="submission_student">
+    <foreign-key id="363" parent="337" name="submission_student">
       <ColNames>upload_by</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="363" parent="337" name="submission_homework">
+    <foreign-key id="364" parent="337" name="submission_homework">
       <ColNames>homework_id</ColNames>
       <RefTableName>files_homework</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="364" parent="338" name="id">
+    <column id="365" parent="338" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="365" parent="338" name="sender_id">
+    <column id="366" parent="338" name="sender_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="366" parent="338" name="receiver_id">
+    <column id="367" parent="338" name="receiver_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="367" parent="338" name="message_content">
+    <column id="368" parent="338" name="message_content">
       <Position>4</Position>
       <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="368" parent="338" name="sender_id">
+    <index id="369" parent="338" name="sender_id">
       <ColNames>sender_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="369" parent="338" name="receiver_id">
+    <index id="370" parent="338" name="receiver_id">
       <ColNames>receiver_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="370" parent="338" name="PRIMARY">
+    <key id="371" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="371" parent="338" name="sender_id">
+    <foreign-key id="372" parent="338" name="sender_id">
       <ColNames>sender_id</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="372" parent="338" name="receiver_id">
+    <foreign-key id="373" parent="338" name="receiver_id">
       <ColNames>receiver_id</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="373" parent="339" name="id">
+    <column id="374" parent="339" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="375" parent="339" name="migration">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="376" parent="339" name="batch">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="377" parent="339" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="378" parent="340" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="374" parent="339" name="username">
+    <column id="379" parent="340" name="username">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="375" parent="339" name="password">
+    <column id="380" parent="340" name="password">
       <Position>3</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="376" parent="339" name="fullname">
+    <column id="381" parent="340" name="name">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="377" parent="339" name="email">
+    <column id="382" parent="340" name="email">
       <Position>5</Position>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="378" parent="339" name="contact">
+    <column id="383" parent="340" name="contact">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="379" parent="339" name="type">
+    <column id="384" parent="340" name="is_admin">
       <Position>7</Position>
-      <DataType>varchar(100)|0s</DataType>
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
     </column>
-    <index id="380" parent="339" name="username">
+    <index id="385" parent="340" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="381" parent="339" name="PRIMARY">
+    <key id="386" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="382" parent="339" name="username">
+    <key id="387" parent="340" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>

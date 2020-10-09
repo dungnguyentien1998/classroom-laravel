@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Message;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -22,27 +23,10 @@ class MessageController extends Controller
     public function index()
     {
         $messages = Message::all();
-
-//        $messagesSent = DB::table('users')
-//                    ->join('messages', 'users.id', '=', 'messages.receiver_id')
-//                    ->where('messages.sender_id', '=', Auth::user()->id)
-//                    ->select('messages.id as idm', 'users.username', 'messages.message_content')
-//                    ->get();
-//
-//
-//        $messagesReceived = DB::table('users')
-//                    ->join('messages', 'users.id', '=', 'messages.sender_id')
-//                    ->where('messages.receiver_id', '=', Auth::user()->id)
-//                    ->select('users.username as username', 'messages.message_content as message_content', 'messages.sender_id as sender_id')
-//                    ->get();
-
-
-//        $messages = array();
-//        $messages[0] = $messagesSent;
-//        $messages[1] = $messagesReceived;
-
-
-        return view('messages.index', compact('messages'));
+        $user = User::find(Auth::id());
+        $sent = $user->messagesSent()->get();
+        $received = $user->messagesReceived()->get();
+        return view('messages.index', compact('sent', 'received'));
     }
 
     /**

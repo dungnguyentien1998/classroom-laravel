@@ -12,8 +12,8 @@
                     <div class="col-sm-4">
                         @if(Auth::user()->is_admin == 1)
                             <a class="btn btn-primary" href="/admin/dashboard/users/create">Add new user</a>
-                        @else
-                            <a class="btn btn-primary" href="{{ route('users.create') }}">Add new user</a>
+                            {{--                        @else--}}
+                            {{--                            <a class="btn btn-primary" href="{{ route('users.create') }}">Add new user</a>--}}
                         @endif
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                                    aria-describedby="example2_info">
                                 <thead>
                                 <tr role="row">
-                                    <th width="10%" class="sorting_asc" tabindex="0" aria-controls="example2"
+                                    <th width="15%" class="sorting_asc" tabindex="0" aria-controls="example2"
                                         rowspan="1" colspan="1" aria-label="Name: activate to sort column descending"
                                         aria-sort="ascending">User Name
                                     </th>
@@ -45,7 +45,7 @@
                                     </th>
                                     <th width="20%" class="sorting hidden-xs" tabindex="0" aria-controls="example2"
                                         rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending">
-                                        Password
+                                        Contact
                                     </th>
                                     <th tabindex="0" aria-controls="example2" rowspan="1" colspan="2"
                                         aria-label="Action: activate to sort column ascending">Action
@@ -58,45 +58,50 @@
                                         <td class="sorting_1">{{ $user->username }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td class="hidden-xs">{{ $user->name }}</td>
-                                        {{--                                        <td class="hidden-xs">{{ $user->password }}</td>--}}
+                                        <td class="hidden-xs">{{ $user->contact }}</td>
                                         <td>
                                             @if(Auth::user()->is_admin == 1)
                                                 <form class="row" method="POST"
                                                       {{--                                                  action="{{ route('users.destroy', $user->id) }}"--}}
                                                       action="/admin/dashboard/users/{{$user->id}}"
                                                       onsubmit="return confirm('Are you sure?')">
+{{--                                                                                                        @else--}}
+{{--                                                                                                            <form class="row" method="POST"--}}
+{{--                                                                                                                  action="{{ route('users.destroy', $user->id) }}"--}}
+{{--                                                                                                                                                                                action="/admin/dashboard/users/{{$user->id}}"--}}
+{{--                                                                                                                  onsubmit="return confirm('Are you sure?')">--}}
+                                                    @endif
+
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <input type="hidden" name="_token"
+                                                           value="{{ csrf_token() }}">
+
+                                                    @if(Auth::user()->is_admin == 1)
+                                                        <a href="/admin/dashboard/users/{{$user->id}}/edit"
+                                                           class="btn btn-warning col-sm-3 col-xs-5 btn-margin">
+                                                            Update
+                                                        </a>
+                                                    @elseif($user->username != Auth::user()->username)
+                                                        <a href="{{ route('users.edit', $user->id) }}"
+
+                                                           class="btn btn-primary">
+                                                            Send message
+                                                        </a>
                                                     @else
-                                                        <form class="row" method="POST"
-                                                              action="{{ route('users.destroy', $user->id) }}"
-                                                              {{--                                                              action="/admin/dashboard/users/{{$user->id}}"--}}
-                                                              onsubmit="return confirm('Are you sure?')">
-                                                            @endif
+                                                        <a href="{{ route('users.edit', $user->id) }}"
 
-                                                            <input type="hidden" name="_method" value="DELETE">
-                                                            <input type="hidden" name="_token"
-                                                                   value="{{ csrf_token() }}">
+                                                           class="btn btn-warning col-sm-3 col-xs-5 btn-margin">
+                                                            Update
+                                                        </a>
+                                                    @endif
 
-                                                            @if(Auth::user()->is_admin == 1)
-                                                            {{--                                                <a href="{{ route('users.edit', $user->id) }}"--}}
-                                                            <a href="/admin/dashboard/users/{{$user->id}}/edit"
-                                                               class="btn btn-warning col-sm-3 col-xs-5 btn-margin">
-                                                                Update
-                                                            </a>
-                                                            @else
-                                                                <a href="{{ route('users.edit', $user->id) }}"
-{{--                                                                <a href="/admin/dashboard/users/{{$user->id}}/edit"--}}
-                                                                   class="btn btn-warning col-sm-3 col-xs-5 btn-margin">
-                                                                    Update
-                                                                </a>
-                                                            @endif
-
-                                                            @if ($user->username != Auth::user()->username)
-                                                                <button type="submit"
-                                                                        class="btn btn-danger col-sm-3 col-xs-5 btn-margin">
-                                                                    Delete
-                                                                </button>
-                                                            @endif
-                                                        </form>
+                                                    @if ($user->username != Auth::user()->username && Auth::user()->is_admin == 1)
+                                                        <button type="submit"
+                                                                class="btn btn-danger col-sm-3 col-xs-5 btn-margin">
+                                                            Delete
+                                                        </button>
+                                                    @endif
+                                                </form>
                                         </td>
                                     </tr>
                                 @endforeach

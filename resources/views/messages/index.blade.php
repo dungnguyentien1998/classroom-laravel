@@ -27,22 +27,21 @@
 
                                 <thead>
                                 <tr role="row">
-                                    <th width="10%" class="sorting_asc" tabindex="0" aria-controls="example2"
+                                    <th width="25%" class="sorting_asc" tabindex="0" aria-controls="example2"
                                         rowspan="1" colspan="1" aria-label="Name: activate to sort column descending"
                                         aria-sort="ascending">From user
                                     </th>
-                                    <th width="20%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                    <th width="50%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Email: activate to sort column ascending">Message
                                         content
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($messages as $message)
+                                @foreach ($received as $message)
                                     <tr role="row" class="odd">
                                         @if ($message->receiver_id == Auth::user()->id)
-                                            <td class="sorting_1">{{ $message->sender_id }}</td>
-{{--                                            <td class="sorting_1">{{ $message->username }}</td>--}}
+                                            <td class="sorting_1">{{ $message->userSent()->get()[0]->username }}</td>
                                             <td>{{ $message->message_content }}</td>
                                         @endif
                                     </tr>
@@ -83,22 +82,21 @@
 
                                 <thead>
                                 <tr role="row">
-                                    <th width="10%" class="sorting_asc" tabindex="0" aria-controls="example2"
+                                    <th width="25%" class="sorting_asc" tabindex="0" aria-controls="example2"
                                         rowspan="1" colspan="1" aria-label="Name: activate to sort column descending"
                                         aria-sort="ascending">To user
                                     </th>
-                                    <th width="20%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                    <th width="50%" class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="Email: activate to sort column ascending">Message
                                         content
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($messages as $message)
+                                @foreach ($sent as $message)
                                     <tr role="row" class="odd">
                                         @if ($message->sender_id == Auth::user()->id)
-                                            <td class="sorting_1">{{ $message->receiver_id }}</td>
-{{--                                            <td class="sorting_1">{{ $message->userReceived->id }}</td>--}}
+                                            <td class="sorting_1">{{ $message->userReceived()->get()[0]->username }}</td>
                                             <td>{{ $message->message_content }}</td>
                                             <td>
                                                 @if(Auth::user()->is_admin == 1)
