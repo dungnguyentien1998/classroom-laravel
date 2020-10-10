@@ -34,6 +34,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Message', 'receiver_id');
     }
 
+    public function submissions(){
+        return $this->hasMany('App\Models\Submission', 'upload_by');
+    }
+
 
     /**
      * The attributes that should be hidden for arrays.

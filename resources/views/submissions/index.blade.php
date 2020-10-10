@@ -65,9 +65,9 @@
                                     <tr role="row" class="odd">
                                         <td class="sorting_1">{{ $homework->path }}</td>
 
-{{--                                        <td>--}}
-{{--                                            <a href="/download/{{$homework->path}}">Download</a>--}}
-{{--                                        </td>--}}
+                                        <td>
+                                            <a href="/download/{{$homework->path}}">Download</a>
+                                        </td>
                                         <td>
                                             <a href="/uploads/{{$homework->id}}">Submit</a>
                                         </td>

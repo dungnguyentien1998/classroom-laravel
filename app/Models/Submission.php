@@ -12,4 +12,8 @@ class Submission extends Model
 //        return $this->directory.$value;
 //    }
     public $timestamps = false;
+
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'upload_by', 'id');
+    }
 }

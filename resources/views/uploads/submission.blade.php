@@ -70,7 +70,7 @@
                                 @foreach ($submissions as $submission)
                                     <tr role="row" class="odd">
                                         <td class="sorting_1">{{ $submission->path }}</td>
-                                        <td class="sorting_1">{{ $submission->upload_by }}</td>
+                                        <td class="sorting_1">{{ $submission->user()->get()[0]->username }}</td>
                                         {{--                                        <td>{{ $homework->size }}</td>--}}
                                         {{--                                        <td class="hidden-xs">{{ $homework->download }}</td>--}}
                                         <td>

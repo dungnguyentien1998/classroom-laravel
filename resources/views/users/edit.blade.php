@@ -29,7 +29,7 @@
                                                            value="{{ $user->username }}" readonly>
                                                 @else
                                                     <input id="username" type="text" class="form-control" name="username"
-                                                           value="{{ $user->username }}" required autofocus>
+                                                           value="{{ $user->username }}" readonly>
                                                 @endif
 
                                                 @if ($errors->has('username'))
@@ -52,7 +52,7 @@
                                                            value="{{ $user->name }}" readonly>
                                                 @else
                                                     <input id="name" type="text" class="form-control" name="name"
-                                                           value="{{ $user->name }}" required>
+                                                           value="{{ $user->name }}" readonly>
                                                 @endif
 
 

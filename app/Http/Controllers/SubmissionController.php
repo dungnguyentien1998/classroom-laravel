@@ -99,5 +99,10 @@ class SubmissionController extends Controller
         //
     }
 
+    public function download($path){
+        $file = public_path()."/homeworks/".$path;
+        $headers = ['Content-Type' => 'application/octet-stream',];
+        return response()->download($file, $path, $headers);
+    }
 
 }

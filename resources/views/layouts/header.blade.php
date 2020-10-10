@@ -43,9 +43,9 @@
                                     <a href="{{ route('login') }}" class="btn btn-default btn-flat">Login</a>
                                 </div>
                             @else
-                                <div class="pull-left">
-                                    <a href="{{ url('profile') }}" class="btn btn-default btn-flat">Profile</a>
-                                </div>
+    {{--                                <div class="pull-left">--}}
+    {{--                                    <a href="{{ url('profile') }}" class="btn btn-default btn-flat">Profile</a>--}}
+    {{--                                </div>--}}
                                 <div class="pull-right">
                                     @if(Auth::user()->is_admin == 1)
                                         <a class="btn btn-default btn-flat" href="{{ route('admin.logout') }}"

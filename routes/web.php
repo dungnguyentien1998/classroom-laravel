@@ -24,7 +24,7 @@ Route::post('/messages/{id}', 'App\Http\Controllers\MessageController@store');
 Route::get('/uploads', 'App\Http\Controllers\SubmissionController@index');
 Route::get('/uploads/{id}', 'App\Http\Controllers\SubmissionController@create');
 Route::post('/uploads/{id}', 'App\Http\Controllers\SubmissionController@store');
-//Route::get('/admin/dashboard/messages', 'App\Http\Controllers\MessageController@index');
+Route::get('/download/{path}', 'App\Http\Controllers\SubmissionController@download');
 
 Route::get('/challenges', 'App\Http\Controllers\ChallengeController@index');
 Route::get('/challenges/submit/{id}', 'App\Http\Controllers\ChallengeController@show');
